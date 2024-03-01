@@ -4,7 +4,7 @@ deployment:
   name: quick-links-deployment
   replicaCount: 2
   image:
-    repository: quick-links
+    repository: ghcr.io/sujeet-agrahari/quick-links
     tag: 0.0.1
     pullPolicy: Always
   env:
