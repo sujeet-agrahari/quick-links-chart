@@ -6,7 +6,7 @@ deployment:
   image:
     repository: quick-links
     tag: dev
-    pullPolicy: Never
+    pullPolicy: Always
   env:
     NODE_ENV: 'development'
     DB_HOST: 'postgres-postgresql-ha-pgpool.postgres.svc.cluster.local'
