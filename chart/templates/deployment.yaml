@@ -21,3 +21,4 @@ spec:
             - name: {{ $key }}
               value: {{ quote $value }}
           {{- end }}
+            APP_VERSION: {{ .Values.deployment.image.tag }}
