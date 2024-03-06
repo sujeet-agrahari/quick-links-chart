@@ -12,6 +12,7 @@ spec:
       labels:
         app: {{.Values.app_name }}
     spec:
+      evisionHistoryLimit: 0
       containers:
         - name: {{.Values.app_name }}
           image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
