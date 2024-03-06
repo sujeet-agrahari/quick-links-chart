@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.deployment.name }}
 spec:
+  revisionHistoryLimit: 0
   replicas: {{ .Values.deployment.replicaCount }}
   selector:
     matchLabels:
@@ -12,7 +13,6 @@ spec:
       labels:
         app: {{.Values.app_name }}
     spec:
-      evisionHistoryLimit: 0
       containers:
         - name: {{.Values.app_name }}
           image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
