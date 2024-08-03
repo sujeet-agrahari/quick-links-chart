@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.deployment.name }}
+  annotations:
+    latest-change: {{.Values.latest_change}}
 spec:
   revisionHistoryLimit: 0
   replicas: {{ .Values.deployment.replicaCount }}
@@ -13,7 +15,6 @@ spec:
       labels:
         app: {{.Values.app_name }}
         istio-injection: enabled
-        latest-change: {{.Values.latest_change}}
     spec:
       containers:
         - name: {{.Values.app_name }}
