@@ -1,6 +1,6 @@
 app_name: quick-links
 
-latest_change: 'deployment-change'
+latest_change: 'Latest Deployment'
 
 deployment:
   name: quick-links-deployment
