@@ -13,6 +13,7 @@ spec:
       labels:
         app: {{.Values.app_name }}
         istio-injection: enabled
+        latest-change: {{.Values.latest_change}}
     spec:
       containers:
         - name: {{.Values.app_name }}

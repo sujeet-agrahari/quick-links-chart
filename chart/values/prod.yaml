@@ -1,5 +1,7 @@
 app_name: quick-links
 
+latest_change: 'Deployment testing'
+
 deployment:
   name: quick-links-deployment
   replicaCount: 2
